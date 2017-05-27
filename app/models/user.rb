@@ -30,6 +30,7 @@
 
 class User < ApplicationRecord
   has_many :chargers
+  has_many :reservations
   
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :trackable, :validatable, :omniauthable
