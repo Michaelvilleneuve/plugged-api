@@ -2,13 +2,12 @@ Schema
 ======
 
 User
-  - firstname
-  - lastname
+  - name
   - password
   - email
   - bio
   - phone_number
-  - picture
+  - image
 
 Charger
   - lat
