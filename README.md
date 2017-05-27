@@ -31,8 +31,8 @@ API
 Lister les chargeurs en fonction de la destination
  `GET /chargers?lat=XXX&lng=XXX`
 
-Créer un chargeur
- `POST /chargers`
+CRUD Chargeur
+ `POST, DELETE, UPDATE`
 
 Réserver un chargeur
  `POST /chargers/:id/reservations`
