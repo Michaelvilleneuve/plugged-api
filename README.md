@@ -1,24 +1,55 @@
-# README
+Schema
+======
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User
+  - firstname
+  - lastname
+  - password
+  - email
+  - bio
+  - phone_number
+  - picture
 
-Things you may want to cover:
+Charger
+  - lat
+  - lng
+  - user_id
+  - plug_type
+  - hour_price
 
-* Ruby version
+Reservation
+  - starts_at
+  - ends_at
+  - status
+  - price
+  - charger_id
+  - user_id
 
-* System dependencies
 
-* Configuration
+API
+===
 
-* Database creation
+Lister les chargeurs en fonction de la destination
+ `GET /chargers?lat=XXX&lng=XXX`
 
-* Database initialization
+Créer un chargeur
+ `POST /chargers`
 
-* How to run the test suite
+Réserver un chargeur
+ `POST /chargers/:id/reservations`
 
-* Services (job queues, cache servers, search engines, etc.)
+Voir les réservations
+ `GET /users/reservations, to: 'reservations#index'`
 
-* Deployment instructions
+Routes classiques pour les utilisateurs (crud)
 
-* ...
+FRONT
+=====
+
+ / --> Trouver un chargeur, champ de recherche de lieu (google API)
+ /account --> Voir ses infos personnelles (formulaire + onglet reservations)
+ /account/reservations --> Lister ses réservation (forme Google Card ?), possibilité de la modifier depuis ici ?
+ /reserve --> Réservation d'un chargeur
+ /host --> Publication d'un charger
+
+
